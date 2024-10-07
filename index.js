@@ -6,12 +6,15 @@ for (let i = 0; i < nativeArray.length; i++) {
 console.log(nativeArray);
 
 // task 2
-let array = [8, 14, 3, 13, 7];
-function getPrimeOfArray(array) {
-  let num = 0;
-  for (let i = 0; i < array.length; i++) {}
+function isPrime(num) {
+  if (num < 2) return false; 
+  for (let i = 2; i <= Math.sqrt(num); i++) { 
+      if (num % i === 0) return false; 
+  }
+  return true;
 }
-console.log(array);
+const numbers = [2, 3, 4, 5, 10, 13, 17, 20];
+numbers.filter(isPrime).forEach(num => console.log(num));
 
 // task 3
 const arr1 = [1, 2, 3];
